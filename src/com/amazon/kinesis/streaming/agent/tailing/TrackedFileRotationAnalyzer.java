@@ -160,8 +160,8 @@ public class TrackedFileRotationAnalyzer {
      */
     public int findCurrentOpenFileAfterTruncate() {
         Preconditions.checkNotNull(currentOpenFile);
-        Preconditions.checkState(incoming.size() > 1); // always true after rotation by Truncate
-        Preconditions.checkState(hasCounterpart(incoming.get(0))); // always true for rotation by Truncate
+        //Preconditions.checkState(incoming.size() > 1); // always true after rotation by Truncate
+        //Preconditions.checkState(hasCounterpart(incoming.get(0))); // always true for rotation by Truncate
         // In case of rotation by Truncate, the current open file
         // MUST have a counterpart: either the latest file, or a previously
         // rotated file. If not, this is an anomaly (could happen if
